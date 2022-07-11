@@ -9,32 +9,51 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
+//private var castItems:[Sweets] = [Sweets]()
+// 
+//func fechData(){
+//    castItems.removerAll()
+//    URLSession.shared.dataTask(with: "http://hakodate.gq/sweets.json")!, completionHandler)
+//}
+
 class ViewController: UIViewController{
-    
+  
 //    let titleLabels: [String] = ["title1", "title2", "title3", "title4"]
     
     override func viewDidLoad(){
         super.viewDidLoad()
+    
         
-        Alamofire.request("http://hakodate.gq/sweets.json", method: .get).responseJSON {
-                res in
-            print(res)
-            guard let returnValue = res.result.value else{
-               // print("Error!")
+        
+        Alamofire.request("http://hakodate.gq/sweets.json", method: .get, encoding:
+                            JSONEncoding.default).responseJSON {
+                response in
+            print(response)
+            switch response.result {
+
+            case .success:
+                guard let data = response.data else{
                 return
             }
-//                                print(JSON(returnValue))
-            let json = JSON(returnValue)
-                json["data"].forEach{(_, json) in
-                    print(json["sweets"].string!)
-//                    } else {
-//                        print("Error!")
-//                    }
+                guard let UserModel = try? JSONDecoder().decode(UserModel.self, from: data) else {
+               //print("Error!")
+                return
+            }
+
+            case .failure(let error):
+                           print(error)
+
                 }
         }
+
     }
+//        Alamofire.request("http://hakodate.gq/sweets.json").response { response in
+//            if let data = response.data {
+//                let result = try? JSONDecoder().decode(UserModel.self, from: data)
+//                print(result)
+//            }
+//        }
 }
-                      
 
 
 

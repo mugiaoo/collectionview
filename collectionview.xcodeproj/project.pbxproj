@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AF0C40F86D059E1CBE9C878 /* Pods_collectionview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B15DF1F735C1B6079836B76 /* Pods_collectionview.framework */; };
+		925750182860450E00680B75 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925750172860450E00680B75 /* UserModel.swift */; };
 		926FB2CA283B5B4F005BA649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FB2C9283B5B4F005BA649 /* AppDelegate.swift */; };
 		926FB2CC283B5B4F005BA649 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FB2CB283B5B4F005BA649 /* SceneDelegate.swift */; };
 		926FB2CE283B5B4F005BA649 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FB2CD283B5B4F005BA649 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		925750172860450E00680B75 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		926FB2C6283B5B4F005BA649 /* collectionview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collectionview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926FB2C9283B5B4F005BA649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		926FB2CB283B5B4F005BA649 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				926FB2C9283B5B4F005BA649 /* AppDelegate.swift */,
 				926FB2CB283B5B4F005BA649 /* SceneDelegate.swift */,
 				926FB2CD283B5B4F005BA649 /* ViewController.swift */,
+				925750172860450E00680B75 /* UserModel.swift */,
 				926FB2CF283B5B4F005BA649 /* Main.storyboard */,
 				926FB2D5283B5B52005BA649 /* Assets.xcassets */,
 				926FB2D7283B5B52005BA649 /* LaunchScreen.storyboard */,
@@ -336,6 +339,7 @@
 				926FB2CE283B5B4F005BA649 /* ViewController.swift in Sources */,
 				926FB2CA283B5B4F005BA649 /* AppDelegate.swift in Sources */,
 				926FB2D4283B5B4F005BA649 /* collectionview.xcdatamodeld in Sources */,
+				925750182860450E00680B75 /* UserModel.swift in Sources */,
 				926FB2CC283B5B4F005BA649 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
