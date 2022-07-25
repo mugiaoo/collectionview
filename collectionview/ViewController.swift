@@ -25,10 +25,10 @@ class ViewController: UIViewController{
     
         
         
-        Alamofire.request("http://hakodate.gq/sweets.json", method: .get, encoding:
+        Alamofire.request("http://sweetsapi.c.fun.ac.jp/sweets", method: .get, encoding:
                             JSONEncoding.default).responseJSON {
                 response in
-            print(response)
+            //print(response)
             switch response.result {
 
             case .success:
@@ -39,7 +39,8 @@ class ViewController: UIViewController{
                //print("Error!")
                 return
             }
-
+                
+                
             case .failure(let error):
                            print(error)
 

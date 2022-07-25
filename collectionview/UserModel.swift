@@ -6,16 +6,53 @@
 //
 
 import Foundation
+import UserNotifications
 
 struct UserModel: Codable{
     let sweets: [Sweets]
 }
 
 struct Sweets: Codable{
-    let sweets_id: Int?
-    let name: String?
-    let price: Int?
-    let imagePath: String?
+    let id: Int
+    let shop_id: Int
+    let name: String
+    let price: String
+    let description: String
+    let imagePath: URL
+    let created_at: Date
+    let updated_at: Date
+    let from_rdf: Bool
+    let favorite: String
+    let property_number: String
+    struct shop: Codable{
+        let id: Int
+        let name: String
+        let description: String
+        let area: String
+        let postcode: String
+        let address: String
+        let openingHoursSpecification: String
+        let closed: String
+        let parking: String
+        let eatin: String
+        let email: String
+        let url:URL
+        let latitude: Int
+        let longitude: Int
+        let imagePath: URL
+        let telephone: String
+        let created_at: Date
+        let updateyd_at: Date
+        let propert_number: Int
+    }
+    let small_categories:[Small]
+}
+struct Small: Codable{
+    let id: Int
+    let large_category_id: Int
+    let name: String
+    let created_at: Date
+    let update_at: Date
 }
 
 //"sweets_id": 1,
