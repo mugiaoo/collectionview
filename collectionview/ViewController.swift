@@ -16,9 +16,12 @@ import Alamofire
 //    URLSession.shared.dataTask(with: "http://hakodate.gq/sweets.json")!, completionHandler)
 //}
 
+
 class ViewController: UIViewController{
   
 //    let titleLabels: [String] = ["title1", "title2", "title3", "title4"]
+    
+    var sweets = [Sweets]()
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -29,13 +32,16 @@ class ViewController: UIViewController{
                             JSONEncoding.default).responseJSON {
                 response in
             //print(response)
+            if let data = response.data{
+                print(String(data: data, encoding: .utf8)!)
+            }
             switch response.result {
 
             case .success:
                 guard let data = response.data else{
                 return
             }
-                guard let UserModel = try? JSONDecoder().decode(UserModel.self, from: data) else {
+                guard let UserModel = try? JSONDecoder().decode([Sweets].self, from: data) else {
                //print("Error!")
                 return
             }
@@ -53,7 +59,7 @@ class ViewController: UIViewController{
 //                let result = try? JSONDecoder().decode(UserModel.self, from: data)
 //                print(result)
 //            }
-//        }
+//       // }
 }
 
 
